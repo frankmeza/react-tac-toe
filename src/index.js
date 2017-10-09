@@ -5,7 +5,7 @@ import './index.css'
 class Square extends React.Component {
   constructor(props) {
     super(props)
-    
+
     this.state = {
       value: null
     }
@@ -15,8 +15,8 @@ class Square extends React.Component {
   // and returns the value within itself when rendered
   render() {
     return (
-      <button className="square" onClick={ () => alert('you clicked it ')}>
-        {this.props.value}
+      <button className="square" onClick={ () => this.setState({ value: 'X' }) }>
+        {this.state.value}
       </button>
     )
   }
