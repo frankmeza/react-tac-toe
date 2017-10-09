@@ -7,7 +7,7 @@ class Square extends React.Component {
   // and returns the value within itself when rendered
   render() {
     return (
-      <button className="square">
+      <button className="square" onClick={ () => alert('you clicked it ')}>
         {this.props.value}
       </button>
     )
