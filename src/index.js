@@ -3,6 +3,14 @@ import ReactDOM from 'react-dom'
 import './index.css'
 
 class Square extends React.Component {
+  constructor(props) {
+    super(props)
+    
+    this.state = {
+      value: null
+    }
+  }
+
   // 3. Square#render takes in the props.value,
   // and returns the value within itself when rendered
   render() {
