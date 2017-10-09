@@ -23,6 +23,13 @@ class Square extends React.Component {
 }
 
 class Board extends React.Component {
+  constructor(props) {
+    super(props)
+
+    this.state = {
+      squares: Array(9).fill(null)
+    }
+  }
   // 2. the method returns a full Square Component,
   //  after having passed in a value of i, from the method params
   renderSquare(i) {
