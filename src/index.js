@@ -3,18 +3,22 @@ import ReactDOM from 'react-dom'
 import './index.css'
 
 class Square extends React.Component {
+  // 3. Square#render takes in the props.value,
+  // and returns the value within itself when rendered
   render() {
     return (
       <button className="square">
-        {/* TODO */}
+        {this.props.value}
       </button>
     )
   }
 }
 
 class Board extends React.Component {
+  // 2. the method returns a full Square Component,
+  //  after having passed in a value of i, from the method params
   renderSquare(i) {
-    return <Square />
+    return <Square value={i}/>
   }
 
   render() {
@@ -24,6 +28,7 @@ class Board extends React.Component {
       <div>
         <div className="status">{status}</div>
         <div className="board-row">
+          {/* 1. this.renderSquare(i) is called here, referring to Board#render */}
           {this.renderSquare(0)}
           {this.renderSquare(1)}
           {this.renderSquare(2)}
